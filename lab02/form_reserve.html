@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form demo</title>
+    <title>Hotel Booking</title>
 </head>
 <body>
 <h3>Hotel Booking</h3>
 
-<table>
+<table >
     <form method="POST" action="https://angsila.cs.buu.ac.th/~wittawas/632/88726059/lab02/afile.php">
     <tr>
         <td><label name="roomtype">Room Type</label></td>
-        <td colspan=2 >
+        <td colspan="1" >
             <select name="roomtype">
-                <option value="0">Please Select</option>
+                <option value="0" >Please Select</option>
                 <option value="Standard">Standard</option>
                 <option value="Luxury">Luxury</option>
                 <option value="Deluxe">Deluxe</option>
@@ -23,9 +23,9 @@
     </tr>
     <tr>
         <td><label name="numguest">Number of guests</label></td>
-        <td colspan=2>
+        <td colspan="1">
             <select name="numguest">
-                <option value="0">Please Select</option>
+                <option value="0" >Please Select</option>
                 <option value="1-2">1-2</option>
                 <option value="3-4">3-4</option>
                 <option value="5-6">5-6</option>
@@ -35,37 +35,50 @@
     </tr>
     <tr>
         <td><label for="name">Name</label></td>
-        <td><input type="text" name="fame" >
-        <input type="text" name="lame" ></td>
-    </tr>
-    <tr>
-        <td><label for="name">Email</label></td>
-        <td><input type="text" name="Email"></td>
-    </tr>
-    <tr>
-        <td><label for="choice">งานอดิเรก:</label></td>
-        <td><input type="checkbox" name="choice1" id="choice1" value="1">ดูหนัง
-        <input type="checkbox" name="choice2" id="choice2" value="2">ฟังเพลง
-        <input type="checkbox" name="choice3" id="choice3" value="3">เล่นเกม<br></td>
-    </tr>
-    <tr>
-        <td><label for="emotion">ความรู้สึกตอนนี้ :</label></td>
         <td>
-            <select name="emotion">
-            <option value="0">--Select one--</option>
-            <option value="1">Happy</option>
-            <option value="2">Sad</option>
-            <option value="3">Fun</option>
-            </select>
+            <input type="text" placeholder="Frist" id="fame">
+            <input type="text" placeholder="Last" id="lname">
         </td>
     </tr>
     <tr>
-        <td>ข้อเสนอแนะ:</td>
-        <td><Textarea name="commmet" id="comment" rows="5" cols="50"></Textarea><br></td>
+        <td><label for="name">Email</label></td>
+        <td><input type="text" placeholder="john@company.com" name="email" id="email"></td>
     </tr>
     <tr>
-        <td colspan=2 style="text-align:center"><input type="submit" value="Send">
-        <input type="reset" value="Clear"></td>
+        <td><label for="arrivaldate" for="arrivaltime">Arrival</label></td> 
+        <td>
+            <input type="date" placeholder="MM / DD / YYYY" name = "arrivaldate" id = "arrivaldate">
+            <input type="time" placeholder="HH : MM" name = "arrivaltime" id = "arrivaltime">
+        </td>
+    </tr>
+    <tr>
+        <td><label for="Departuredate" for="Departuretime">Departure</label></td> 
+        <td>
+            <input type="date" placeholder="MM / DD / YYYY" name = "Departuredate" id = "Departuredate">
+            <input type="time" placeholder="HH : MM" name = "Departuretime" id = "Departuretime">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="1"><label for="pickup">Free Pickup</label></td>
+        <td>
+            <input type="radio" name="pickup" id="pickup" value="Yes">Yes, Sure!<br>
+            <input type="radio" name="pickup" id="pickup" value="No">No, I already rented car.
+        </td>
+    </tr>
+    <tr>
+        <td><label for="flightnum">Flight Number</label></td>
+        <td><input type="text" placeholder="C1209" name="flightnum" id="flightnum"></td>
+    </tr>
+    <tr>
+        <td>Other requests</td>
+        <td><Textarea name="otherreq" id="otherreq" rows="5" cols="46"></Textarea><br></td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td>
+            <input type="submit" value="Complete Reservation">
+        </td>
     </tr>
 </form>
 </table>
