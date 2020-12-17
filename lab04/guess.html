@@ -1,9 +1,32 @@
 <input type="text" placeholder="?">
 <button onclick="">Guess</button>
-<div id="hist">50 25 38</div>
+
+<div id="hist"></div>
+
 <div id="result">มากไป</div>
+
 <button onclick="">start Over</button>
+<input type="button" onclick="myFunction()" value="Reset form">
 <script>
     rn = Math.floor(Math.random() * 100);
-    
+    document.write(rn)
+
+    function result(input) {
+    if(input < rn){
+        document.write(input + " น้อยไป"+ (br))
+    }else if(input > rn){
+        document.write(input + " มากไป"+ (br))
+    }else{
+        document.write(input + " ถูกต้อง"+ (br))
+    }
+}
+const commandName = 'my-command';
+
+function myFunction() {
+  document.getElementById("myForm").reset();
+}
+
 </script>
+
+<input type="number" onkeyup="alert(this.value)">
+<div id="disp"></div>
