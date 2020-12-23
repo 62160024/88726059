@@ -1,0 +1,28 @@
+<!doctype html>
+<h2>2.โปรแกรม สูตรคูณ - multi.html</h2>
+<script>
+    function multi(n){
+
+        one = document.getElementById("1");
+        one.innerHTML = "";
+        two = document.getElementById("2");
+        two.innerHTML = "";
+
+        for (i = 1; i <= 12; i++) {
+            one.innerHTML += n + " x "+i+"<br>";
+        }
+        for (i = 1; i <= 12; i++) {
+            two.innerHTML += " = "+(n*i)+"<br>";
+        }
+    }
+ 
+</script>
+<body>
+    <input type="text" placeholder="สูตรคูรแม่ X" id = "num" oninput="multi(this.value)">   
+    <table>
+        <tr>
+            <td id="1"></td>
+            <td id="2"></td>
+        </tr>
+    </table>
+</body>
